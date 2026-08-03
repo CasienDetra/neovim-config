@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-  theme = "gruvchad",
+  theme = "vscode_dark",
   transparency = true,
   hl_override = {
     Comment = { italic = true },
@@ -18,10 +18,10 @@ M.nvdash = { load_on_startup = true }
 M.ui = {
   statusline = {
     enabled = true,
-    theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
+    theme = "default", -- default/vscode/vscode_colored/minimal
     -- default/round/block/arrow separators work only for default statusline theme
     -- round and block will work for minimal theme only
-    separator_style = "default",
+    separator_style = "arrow",
     order = nil,
     modules = nil,
   },

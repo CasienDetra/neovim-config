@@ -1,6 +1,8 @@
 return {
   { import = "plugins.lsp" },
   { import = "plugins.coding" },
+  { import = "plugins.ui" },
+  { import = "plugins.lang" },
   {
     "stevearc/conform.nvim",
     event = "BufWritePre", -- uncomment for format on save
@@ -9,7 +11,7 @@ return {
   {
     "folke/which-key.nvim",
     opts = {
-      preset = "classic",
+      preset = "helix",
       win = {
         no_overlap = false,
       },
@@ -40,17 +42,12 @@ return {
       },
     },
   },
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
+
   {
     "MeanderingProgrammer/render-markdown.nvim",
     dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-mini/mini.nvim" }, -- if you use the mini.nvim suite
     opts = {},
   },
+
+  "nvchad/volt", -- optional, needed for theme switcher
 }
