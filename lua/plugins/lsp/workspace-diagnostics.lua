@@ -2,6 +2,6 @@
 -- NOTE: Show workspace diagnostics
 return {
   "artemave/workspace-diagnostics.nvim",
-  enabled = false,
+  enabled = true,
   lazy = true,
 }
