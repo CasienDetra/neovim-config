@@ -4,6 +4,10 @@ return {
   { import = "plugins.ui" },
   { import = "plugins.lang" },
   {
+    "lukas-reineke/indent-blankline.nvim",
+    enabled = false,
+  },
+  {
     "stevearc/conform.nvim",
     event = "BufWritePre", -- uncomment for format on save
     opts = require "configs.conform",

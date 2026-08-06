@@ -1,4 +1,5 @@
 require "nvchad.options"
+
 -- add yours here!
 -- ref : https://github.com/mcauley-penney/nvim/blob/main/lua/options.lua
 local o, opt, g = vim.o, vim.opt, vim.g
@@ -36,7 +37,8 @@ opt.fillchars = {
 }
 
 opt.colorcolumn = "+0"
-opt.listchars = "tab:¬·,trail:·,extends:►,space:·,precedes:◄,nbsp:␣"
+-- opt.listchars = "tab:¬·,trail:·,extends:►,space:·,precedes:◄,nbsp:␣"
+-- opt.listchars = "tab:  ,trail: ,extends: ,space: ,precedes: ,nbsp: "
 o.shiftwidth = 2
 o.tabstop = 2
 opt.softtabstop = 4
@@ -46,6 +48,7 @@ opt.formatlistpat = table.concat({
   [[^\s*>\s]],
 }, [[\|]])
 
+o.cursorlineopt = "both"
 o.expandtab = true
 -- instead of using the cmd shell for terminal this use pwsh
 -- opt.shell = "powershell.exe"

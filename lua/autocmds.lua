@@ -1,4 +1,21 @@
 require "nvchad.autocmds"
+local visible = {
+  tab = "¬·",
+  trail = "·",
+  extends = "►",
+  space = "·",
+  precedes = "◄",
+  nbsp = "␣",
+}
+
+local hidden = {
+  tab = "  ",
+  trail = " ",
+  extends = " ",
+  space = " ",
+  precedes = " ",
+  nbsp = " ",
+}
 -- do not auto comment on new line
 local api, cmd = vim.api, vim.cmd
 api.nvim_create_autocmd("BufEnter", { command = [[set formatoptions-=cro]] })
@@ -78,3 +95,13 @@ api.nvim_create_autocmd("ColorScheme", {
     api.nvim_set_hl(0, "Visual", { reverse = true })
   end,
 })
+
+vim.opt.listchars = hidden
+
+vim.keymap.set("n", "<leader>ul", function()
+  if vim.opt.listchars:get().space == "·" then
+    vim.opt.listchars = hidden
+  else
+    vim.opt.listchars = visible
+  end
+end, { desc = "Toggle listchars" })

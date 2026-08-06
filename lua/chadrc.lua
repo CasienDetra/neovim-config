@@ -4,9 +4,13 @@
 
 ---@type ChadrcConfig
 local M = {}
-
+M.lsp = {
+  signature = {
+    enabled = false,
+  },
+}
 M.base46 = {
-  theme = "vscode_dark",
+  theme = "seoul256_dark",
   transparency = true,
   hl_override = {
     Comment = { italic = true },
