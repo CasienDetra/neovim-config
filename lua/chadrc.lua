@@ -10,7 +10,7 @@ M.lsp = {
   },
 }
 M.base46 = {
-  theme = "rosepine",
+  theme = "falcon",
   transparency = true,
   hl_override = {
     Comment = { italic = false },

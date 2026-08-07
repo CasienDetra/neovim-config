@@ -14,6 +14,9 @@ return {
     "nvim-lua/plenary.nvim",
   },
   opts = {
+    widget_guides = {
+      enabled = true,
+    },
     lsp = {
       on_attach = require("plugins.lang.utils.handelr").on_attach,
       capabilities = capabilities,

@@ -28,9 +28,9 @@ api.nvim_create_autocmd("TextYankPost", {
 })
 cmd "let g:netrw_banner = 0"
 api.nvim_set_hl(0, "Normal", { bg = "none" })
-api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+-- api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
-api.nvim_set_hl(0, "Pmenu", { bg = "none" })
+-- api.nvim_set_hl(0, "Pmenu", { bg = "none" })
 api.nvim_set_hl(0, "Terminal", { bg = "none" })
 api.nvim_set_hl(0, "EndOfBuffer", { fg = "#f4f4f4", bg = "none" })
 api.nvim_set_hl(0, "FoldColumn", { bg = "none" })
