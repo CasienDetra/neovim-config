@@ -52,25 +52,27 @@ return {
     pickers = {
       oldfiles = {
         prompt_title = "Recent Files",
+        theme = "ivy",
       },
       find_files = {
         hidden = true,
+        theme = "ivy",
       },
     },
-  },
-  keys = {
-    {
-      "<leader>uC",
-      function()
-        if vim.g.colorscheme == "nvchad" then
-          -- NvChad theme switcher
-          vim.cmd "Telescope themes"
-        else
-          -- LazyVim colorscheme picker with preview
-          LazyVim.pick("colorscheme", { enable_preview = true })()
-        end
-      end,
-      desc = "Colorscheme with Preview",
+    keys = {
+      {
+        "<leader>uC",
+        function()
+          if vim.g.colorscheme == "nvchad" then
+            -- NvChad theme switcher
+            vim.cmd "Telescope themes"
+          else
+            -- LazyVim colorscheme picker with preview
+            LazyVim.pick("colorscheme", { enable_preview = true })()
+          end
+        end,
+        desc = "Colorscheme with Preview",
+      },
     },
   },
 }

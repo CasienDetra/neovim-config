@@ -43,6 +43,10 @@ M.ui = {
     },
     modules = nil,
   },
+  tabufline = {
+    order = { "treeOffset", "buffers", "tabs" },
+    modules = nil,
+  },
 
   cmp = {
     lspkind_text = true,
