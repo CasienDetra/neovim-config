@@ -25,8 +25,8 @@ return {
   opts = {
     defaults = {
       prompt_prefix = "   ",
-      selection_caret = " ",
-      entry_prefix = " ",
+      selection_caret = " ➜ ",
+      entry_prefix = " ┆ ",
       sorting_strategy = "ascending",
       layout_config = {
         horizontal = {
@@ -56,6 +56,22 @@ return {
       },
       find_files = {
         hidden = true,
+        theme = "ivy",
+      },
+      live_grep = {
+        prompt_title = "Live Grep",
+        theme = "ivy",
+      },
+      commands = {
+        prompt_title = "History Commands",
+        theme = "ivy",
+      },
+      buffers = {
+        prompt_title = "Buffers",
+        theme = "ivy",
+      },
+      current_buffer_fuzzy_find = {
+        prompt_title = "find current buffer",
         theme = "ivy",
       },
     },
