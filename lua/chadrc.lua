@@ -26,7 +26,7 @@ M.ui = {
     -- round and block will work for minimal theme only
     separator_style = "default",
     order = {
-      "mode",
+      -- "mode",
       "file",
       "git",
       "%=",
