@@ -33,21 +33,6 @@ return {
   { import = "nvchad.blink.lazyspec" },
 
   {
-    "Saghen/blink.cmp",
-    dependencies = { "giuxtaposition/blink-cmp-copilot" },
-    opts = {
-      providers = {
-        copilot = {
-          name = "copilot",
-          module = "blink-cmp-copilot",
-          score_offset = 100,
-          async = true,
-        },
-      },
-    },
-  },
-
-  {
     "MeanderingProgrammer/render-markdown.nvim",
     dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-mini/mini.nvim" }, -- if you use the mini.nvim suite
     opts = {},
