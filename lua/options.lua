@@ -4,7 +4,8 @@ require "nvchad.options"
 -- ref : https://github.com/mcauley-penney/nvim/blob/main/lua/options.lua
 local o, opt, g = vim.o, vim.opt, vim.g
 -- blink cursor
-o.guicursor = "n-v-sm:block,i-c-ci-ve:ver20,r-cr-o:hor50,t:ver50-blinkon500-blinkoff500-TermCursor"
+-- o.guicursor = "n-v-sm:block,i-c-ci-ve:ver20,r-cr-o:hor50,t:ver50-blinkon500-blinkoff500-TermCursor"
+o.guicursor = "a:block"
 o.breakindent = true
 o.breakindentopt = "list:-1"
 o.cindent = true
