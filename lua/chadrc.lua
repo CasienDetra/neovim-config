@@ -10,7 +10,7 @@ M.lsp = {
   },
 }
 M.base46 = {
-  theme = "falcon",
+  theme = "gruvbox",
   transparency = true,
   hl_override = {
     Comment = { italic = false },

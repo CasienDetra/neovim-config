@@ -6,6 +6,7 @@ local servers = {
   "omnisharp",
   "stylua",
   "clangd",
+  "emmet_ls",
   "typescript-language-server",
   "gopls",
   "copilot",
