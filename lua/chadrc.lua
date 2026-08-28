@@ -45,7 +45,7 @@ M.ui = {
   },
   tabufline = {
     order = { "treeOffset", "buffers", "tabs" },
-    modules = nil,
+    modules = require "configs.tabufline",
   },
 
   cmp = {
