@@ -20,7 +20,7 @@ opt.smartcase = true -- Case sensitive if uppercase in search
 opt.smartindent = true -- Case sensitive if uppercase in search
 opt.hlsearch = true -- Don't highlight search results
 opt.shortmess:append "c"
-opt.cmdheight = 1
+opt.cmdheight = 0
 opt.showmode = true
 opt.fillchars = {
   eob = "~",
