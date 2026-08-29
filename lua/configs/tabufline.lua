@@ -1,5 +1,8 @@
 local config = {
   show_icons = false,
+  highlight_active = true,
+  active_bg = "#b8bb26",
+  active_fg = "#000000",
 }
 
 return {
@@ -49,7 +52,12 @@ return {
       has_current = cur_buf() == nr or has_current
 
       local is_curbuf = cur_buf() == nr
-      local tbHlName = "BufO" .. (is_curbuf and "n" or "ff")
+      local hl_name = "BufO" .. (is_curbuf and "n" or "ff")
+
+      if config.highlight_active and is_curbuf then
+        hl_name = "TabuflineActive"
+        api.nvim_set_hl(0, "Tb" .. hl_name, { fg = config.active_fg, bg = config.active_bg, bold = true })
+      end
 
       local name = filename(buf_name(nr))
       name = name and (gen_unique_name(name, i) or name) or " No Name "
@@ -65,18 +73,18 @@ return {
           local devicon, devicon_hl = require("nvim-web-devicons").get_icon(filename(buf_name(nr)))
           if devicon then
             icon = " " .. devicon .. " "
-            icon_hl = new_hl(devicon_hl, tbHlName)
+            icon_hl = new_hl(devicon_hl, "BufOn")
           else
-            icon_hl = new_hl("DevIconDefault", tbHlName)
+            icon_hl = new_hl("DevIconDefault", "BufOn")
           end
         else
-          icon_hl = new_hl("DevIconDefault", tbHlName)
+          icon_hl = new_hl("DevIconDefault", "BufOn")
         end
       end
 
-      local label = "[" .. icon_hl .. icon .. txt(name, tbHlName) .. "]"
+      local label = "[ " .. icon_hl .. icon .. txt(name, hl_name) .. " ]"
 
-      local close_btn = btn("|", nil, "KillBuf", nr)
+      local close_btn = btn("::", nil, "KillBuf", nr)
       local mod = get_opt("mod", { buf = nr })
       local cur_mod = get_opt("mod", { buf = 0 })
 
@@ -87,7 +95,7 @@ return {
       end
 
       label = btn(label, nil, "GoToBuf", nr)
-      label = txt(label .. close_btn, "BufO" .. (is_curbuf and "n" or "ff"))
+      label = txt(label .. close_btn, hl_name)
 
       table.insert(buffers, label)
     end
