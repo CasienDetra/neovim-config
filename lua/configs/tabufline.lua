@@ -1,5 +1,5 @@
 local config = {
-  show_icons = false,
+  show_icons = true,
   highlight_active = true,
   active_bg = "#b8bb26",
   active_fg = "#000000",
@@ -73,18 +73,18 @@ return {
           local devicon, devicon_hl = require("nvim-web-devicons").get_icon(filename(buf_name(nr)))
           if devicon then
             icon = " " .. devicon .. " "
-            icon_hl = new_hl(devicon_hl, "BufOn")
+            icon_hl = new_hl(devicon_hl, hl_name)
           else
-            icon_hl = new_hl("DevIconDefault", "BufOn")
+            icon_hl = new_hl("DevIconDefault", hl_name)
           end
         else
-          icon_hl = new_hl("DevIconDefault", "BufOn")
+          icon_hl = new_hl("DevIconDefault", hl_name)
         end
       end
 
-      local label = "[ " .. icon_hl .. icon .. txt(name, hl_name) .. " ]"
+      local label = "" .. icon_hl .. icon .. txt(name, hl_name) .. ""
 
-      local close_btn = btn("::", nil, "KillBuf", nr)
+      local close_btn = btn("", nil, "KillBuf", nr)
       local mod = get_opt("mod", { buf = nr })
       local cur_mod = get_opt("mod", { buf = 0 })
 
