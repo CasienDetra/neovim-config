@@ -82,7 +82,7 @@ return {
         end
       end
 
-      local label = "" .. icon_hl .. icon .. txt(name, hl_name) .. ""
+      local label = is_curbuf and ("" .. icon_hl .. icon .. txt(name, hl_name) .. "") or (icon_hl .. icon .. txt(name, hl_name))
 
       local close_btn = btn("", nil, "KillBuf", nr)
       local mod = get_opt("mod", { buf = nr })
